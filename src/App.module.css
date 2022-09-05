@@ -1,0 +1,20 @@
+.wrapper {
+	max-width: 70rem; /* largura da tela figma 1120/16px=70 */
+	margin: 2rem auto;
+	padding: 0 1rem;
+
+	display: grid;
+	grid-template-columns: 256px 1fr; /* sidebar tam fixo e posts flexivel */
+	gap: 2rem;
+	align-items: flex-start; /* pra que fiquem colado no topo, se nao a side bar vai tentar esticar pra ter o msm tam que os posts(padrao é o stratch */
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 87.5%;
+	}
+
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
+}
