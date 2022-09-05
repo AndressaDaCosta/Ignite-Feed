@@ -2,15 +2,18 @@
 // JSX = Javascript + XML (HTML) arquivo javascript que contém html
 
 import { Header } from './components/Header';
-import { Post } from './components/Post';
+import { Post, PostProps } from './components/Post';
 import { Sidebar } from './components/Sidebar';
 
 import styles from './App.module.css';
 
 import './global.css';
 
-const posts = [
-	{
+interface Posts extends PostProps {
+	id: number
+  }
+  
+  const posts:Posts[] = [ 	{
 		id: 1,
 		author: {
 			avatarUrl: 'https://github.com/diego3g.png',
@@ -36,13 +39,14 @@ const posts = [
 			role: 'Educator @Rocketseat'
 		},
 		content: [
-			{ type: 'paragraph', content: 'Fala galera 👋' },
+			{ type: 'paragraph', content: 'Fala pessoal 🤙🏽' },
 			{
 				type: 'paragraph',
 				content:
-					'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'
+					'Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏽 '
 			},
-			{ type: 'link', content: 'jane.design/doctorcare' }
+			{type: 'paragraph', content:'Acesse e deixe seu feedback!'},
+			{ type: 'link', content: '👉🏽 Mayk.design' }
 		],
 		publishedAt: new Date('2022-08-31 20:00:00')
 	}
@@ -56,7 +60,7 @@ export function App() {
 			<div className={styles.wrapper}>
 				<Sidebar />
 				<main>
-					{posts.map((post) => {
+					{posts.map(post => {
 						return (
 							<Post
 								key={post.id}
