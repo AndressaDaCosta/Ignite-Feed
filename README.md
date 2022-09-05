@@ -1,4 +1,4 @@
-# Ignite Feed 
+# <img src='https://raw.githubusercontent.com/AndressaDaCosta/fundamentos-react-js-ts/096d09ac56d22cea010b6eb419ca380bcc36a194/src/assets/ignite-logo.svg'>Ignite Feed 
 
 [Figma 🎨](https://www.figma.com/file/K5UYvgTnUtKgFtQfmOLjWZ/Ignite-Feed-Community?is-community-duplicate=1&fuid=)
 
