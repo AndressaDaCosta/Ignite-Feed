@@ -45,6 +45,10 @@
 	gap: 1rem;
 }
 
+/* .authorInfo {
+	display: flex;
+	flex-direction: column;
+} ou display block no strong*/
 .authorInfo strong {
 	display: block;
 	color: var(--gray-100);
@@ -82,12 +86,12 @@
 	line-height: 1.4;
 	margin-top: 1rem;
 }
-
+/* pra esconder o botao sem focus */
 .commentForm footer {
 	visibility: hidden;
 	max-height: 0;
 }
-
+/* focus-within serve qualquer elemento dentro do comment form nao somente a textarea */
 .commentForm:focus-within footer {
 	visibility: visible;
 	max-height: none;

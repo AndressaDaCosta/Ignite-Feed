@@ -4,17 +4,19 @@
 import { Header } from './components/Header';
 import { Post, PostProps } from './components/Post';
 import { Sidebar } from './components/Sidebar';
+import { v4 as uuidv4 } from 'uuid';
 
 import styles from './App.module.css';
 
 import './global.css';
 
 interface Posts extends PostProps {
-	id: number
+	id: string 
   }
+
   
   const posts:Posts[] = [ 	{
-		id: 1,
+		id: uuidv4(),
 		author: {
 			avatarUrl: 'https://github.com/diego3g.png',
 			name: 'Diego Fernandes',
@@ -27,12 +29,13 @@ interface Posts extends PostProps {
 				content:
 					'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'
 			},
-			{ type: 'link', content: '👉🏼 jane.design/doctorcare' }
+			{ type: 'link', content: '👉🏼 jane.design/doctorcare' },
+			{ type: 'link', content: ' #novoprojeto #nlw #rocketseat' }
 		],
 		publishedAt: new Date('2022-09-03 20:00:00')
 	},
 	{
-		id: 2,
+		id: uuidv4(),
 		author: {
 			avatarUrl: 'https://github.com/maykbrito.png',
 			name: 'Mayk Brito',
@@ -48,6 +51,7 @@ interface Posts extends PostProps {
 			{type: 'paragraph', content:'Acesse e deixe seu feedback!'},
 			{ type: 'link', content: '👉🏽 Mayk.design' }
 		],
+		// mdn Intl DateTime formatting
 		publishedAt: new Date('2022-08-31 20:00:00')
 	}
 ];
@@ -56,7 +60,6 @@ export function App() {
 	return (
 		<div>
 			<Header />
-
 			<div className={styles.wrapper}>
 				<Sidebar />
 				<main>

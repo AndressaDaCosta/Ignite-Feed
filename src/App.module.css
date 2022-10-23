@@ -18,3 +18,8 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+/* aplicando responsividade no mobile com unidades de medidas relativas
+16 -> 100%
+14 -> ? 
+ = 14 * 100 /16 = 87,5% */

@@ -1,4 +1,4 @@
-// componentes devem ser iniciados com letras maiuscular pra nao confundir com outros elementos ex: <header></header>  e  <Header />
+// componentes devem ser iniciados com letras maiúscula pra nao confundir com outros elementos ex: <header></header>  e  <Header />
 
 import styles from './Header.module.css'
 

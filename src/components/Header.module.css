@@ -1,3 +1,7 @@
+header {
+	padding: 1rem;
+}
+
 .header {
 	background: var(--gray-800);
 	display: flex;

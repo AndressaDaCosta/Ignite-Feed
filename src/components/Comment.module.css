@@ -10,6 +10,7 @@
 	border-radius: 8px;
 }
 
+/* faz com que a div ocupe o maximo de espaço possível */
 .commentBox {
 	flex: 1;
 }
@@ -25,6 +26,11 @@
 	align-items: flex-start;
 	justify-content: space-between;
 }
+
+/* .authorAndTime {
+	display: flex;
+	flex-direction: column;
+}  ou block -> */
 
 .authorAndTime strong {
 	display: block;
@@ -45,6 +51,7 @@
 	color: var(--gray-400);
 	cursor: pointer;
 	line-height: 0;
+	/* ou font-size: 0 pra diminuir o foco do botão */
 	border-radius: 2px;
 }
 

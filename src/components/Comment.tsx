@@ -29,7 +29,7 @@ interface CommentProps {
 		<div className={styles.comment}>
 			<Avatar
 				hasBorder={false}
-				src="https://github.com/diego3g.png"
+				src="https://github.com/AndressaDaCosta.png"
 				alt=""
 			/>
 

@@ -41,7 +41,7 @@ export function Post({ author, publishedAt, content }: PostProps) {
 		addSuffix: true
 	});
 
-	// evento do usuário padrao handle...
+	// evento do usuário padrão handle...
 	function handleCrateNewComment(event: FormEvent) {
 		event.preventDefault();
 
