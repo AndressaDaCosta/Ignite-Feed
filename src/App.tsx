@@ -11,11 +11,11 @@ import styles from './App.module.css';
 import './global.css';
 
 interface Posts extends PostProps {
-	id: string 
-  }
+	id: string;
+}
 
-  
-  const posts:Posts[] = [ 	{
+const posts: Posts[] = [
+	{
 		id: uuidv4(),
 		author: {
 			avatarUrl: 'https://github.com/diego3g.png',
@@ -48,7 +48,7 @@ interface Posts extends PostProps {
 				content:
 					'Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏽 '
 			},
-			{type: 'paragraph', content:'Acesse e deixe seu feedback!'},
+			{ type: 'paragraph', content: 'Acesse e deixe seu feedback!' },
 			{ type: 'link', content: '👉🏽 Mayk.design' }
 		],
 		// mdn Intl DateTime formatting
@@ -63,7 +63,7 @@ export function App() {
 			<div className={styles.wrapper}>
 				<Sidebar />
 				<main>
-					{posts.map(post => {
+					{posts.map((post) => {
 						return (
 							<Post
 								key={post.id}

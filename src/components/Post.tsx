@@ -5,29 +5,27 @@ import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 
-
 import styles from './Post.module.css';
 
 export interface PostProps {
 	author: {
-	  avatarUrl: string;
-	  name: string;
-	  role: string
-	},
+		avatarUrl: string;
+		name: string;
+		role: string;
+	};
 	content: {
-	  type: 'paragraph' | 'link';
-	  content: string
-	}[],
-	publishedAt: Date
-  }
-
+		type: 'paragraph' | 'link';
+		content: string;
+	}[];
+	publishedAt: Date;
+}
 
 export function Post({ author, publishedAt, content }: PostProps) {
 	// estado = variáveis que eu quero que o componente monitore
 	const [comments, setComments] = useState(['Post muito bacana, hein?!']);
 
 	const [newCommentText, setNewCommentText] = useState('');
-
+	// npm i date-fns biblioteca formatação de datas
 	const publishedDateFormatted = format(
 		publishedAt,
 		"d 'de' LLLL 'às' HH:mm'h'",
